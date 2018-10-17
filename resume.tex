@@ -1,0 +1,183 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\textheight=10in
+\pagestyle{empty}
+\raggedright
+
+\definecolor{white}{RGB}{255,255,255}
+
+\definecolor{darkgray}{RGB}{70,76,67}
+\definecolor{sidecolor}{HTML}{E7E7E7}
+\definecolor{sidebartop}{HTML}{287489}
+\definecolor{sidebarbtm}{HTML}{3298B4}
+\definecolor{sidebarsubdued}{RGB}{158,197,205}
+\definecolor{textsubdued}{RGB}{133,152,183}
+
+\usepackage{hyperref}
+\hypersetup{
+  pdfencoding=unicode,
+  colorlinks,
+  linkcolor={darkgray},
+  citecolor={darkgray},
+  urlcolor={darkgray}
+}
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+ {\Huge \scshape {Anielkis Herrera}}\\
+ Tocancipá, Cundinamarca, Colombia $\cdot$ \href{mailto:anielkis@gmail.com}{anielkis@gmail.com} $\cdot$ +57 3132053893 $\cdot$ \href{https://www.linkedin.com/in/anielkis-herrera-170aa167/}{LinkedIn}\\
+\end{center}
+
+%==== Education ====%
+\header{SKILLS \& PROFICIENCY}
+
+\begin{itemize}
+ \item I have been developing software professionally for more than 12 years. But started 13 years prior as a hobby.
+ \item Natural problem solver, analytical, quick learner	and results-oriented. I like processes automation and re-engineering.
+ \item Expertice as COO of a small company, a project manager, software architect and as a lead developer, always as part of agile teams applying agile methodologies. I too have experience in system and network administrator, information security specialist.
+ \item Expertise in scalable applications, backend development, distributed systems, REST API design and development, cloud computing, containers, DevOps, CI/CD.
+ \item Proficiency in backend.
+ \item Expert Linux user and developer, with deep knowledge of Linux internals.
+\end{itemize}
+
+I know the extent of my skills and how to improve them. I'm better working in backend than user interfaces.
+
+At the moment I am deepening my knowledge about machine learning, data analysis and cloud computing with Kubernetes and Openshift.
+
+\vspace{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{Universidad de las Ciencias Informáticas}\hfill Cuba\\
+Eng Informatic Sciences \hfill Sep 2002 - Apr 2006\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Nubity} \hfill Ciudad de México, México\\
+\textit{Software Engineer} \hfill 2017 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+ \item Process automation using kubernetes and CircleCI.
+ \item Use CircleCI to recreate software repository of Nubity Agent and modules
+ \item Recreate production deployment in Minikube and Kubernetes in amazon
+ \item Use DeployBot to recreate Wordpress websites from backup
+\end{itemize}
+\textbf{Datafactory} \hfill Buenos Aires, Argentina\\
+\textit{Software Engineer} \hfill Mar 2013 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+ \item Process automation
+ \item User authorization service
+ \item Improve infrastructure and processes
+\end{itemize}
+\textbf{Universidad de las Ciencias Informáticas} \hfill Cuba\\
+\textit{Profesor and Software Engineer} \hfill Apr 2006 | Feb 2012\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+ \item Professor of Operating Systems and Computer Security
+ \item Software Architect in Nova (Cuban GNU/Linux distribution)
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+ Programming Languages: & Go, Python, Bash, Latex              \\
+ Technologies:          & Docker, Kubernetes, CircleCI, Puppet \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{Nubity\textquotesingle{}s software repository, Nubity}} {\sl Bash, CircleCI, Docker, Apt, Yum, Zypper} \hfill \href{https://www.nubity.com}{https://www.nubity.com}\\
+Create a build system that uses CircleCI to create automatically the software repository for Nubity Agent and its addons.\\
+\vspace*{2mm}
+{\textbf{Recreate production deployment in Minikube and Kubernetes, Nubity}} {\sl Minikube, Kubernetes, Docker, Bash} \hfill \href{https://www.nubity.com}{https://www.nubity.com}\\
+Create a test environment using Minikube (and Kubernetes) to run software integration tests locally.\\
+\vspace*{2mm}
+{\textbf{Recreate Wordpress websites from backup, Nubity}} {\sl Bash, Docker} \hfill \href{https://www.nubity.com}{https://www.nubity.com}\\
+Process automation using DeployBot to recreate Wordpress websites from backup and configuration files in bitbucket\\
+\vspace*{2mm}
+{\textbf{Live Soccer Statistics app for LG Smart TV, Datafactory}} {\sl Html, Javascript, Go} \hfill \href{http://apilg.datafactory.la}{http://apilg.datafactory.la}\\
+The TV App shows live soccer statistics consulting Datafactory\textquotesingle{}s data. Design and development of the endpoint. Update UI to last LG Smart TV version.\\
+\vspace*{2mm}
+{\textbf{Client Deployment Tool, Datafactory}} {\sl Python, Php, Javascript} \hfill \href{http://cdt.dev.datafactory.la}{http://cdt.dev.datafactory.la}\\
+A web app in PHP with a backend service in Python (with flask and flask\textunderscore jsonrpc). The deploy process includes modify data in PostgreSQL databases, edit XSLT and Json files to adjust parameters and use the result to update svn respositories.\\
+\vspace*{2mm}
+{\textbf{User authorization service, Datafactory}} {\sl Go, Etcd} \hfill \href{http://ssa.datafactory.la}{http://ssa.datafactory.la}\\
+Go service (replacing an old PHP version) that uses headers from the client\textquotesingle{}s browser and an api key to authorize or deny access to Datafactory\textquotesingle{}s data.\\
+\vspace*{2mm}
+{\textbf{TVEnergía, Menpet, Venezuela}} {\sl Python, Bash} \\
+Internal TV channel of the Ministry of Energy and Petroleum of Venezuela\\
+\vspace*{2mm}
+{\textbf{Nova}} {\sl Python, Bash} \hfill \href{http://www.nova.cu}{http://www.nova.cu}\\
+A GNU/Linux distribution for the migration of the Cuban state and the ministries.\\
+\vspace*{2mm}
+
+\
+\end{document}
